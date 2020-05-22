@@ -5,6 +5,7 @@ import Form from './Form'
 import axios from 'axios'
 import auth from './PrivateRoute/auth'
 import Retails from './Retails';
+import { apiUrl } from '../config'
 
 class App extends React.Component {
   state =
@@ -13,25 +14,25 @@ class App extends React.Component {
     }
 
   loadContent = async () => {
-   
+
     const token = localStorage.getItem('auth-token');
 
-    const {data} = await axios({
+    const { data } = await axios({
       method: 'get',
-      url: 'http://localhost:5000/retailer',
+      url: apiUrl + '/retailer',
       headers: {
         Authorization: `Bearer ${token}`
       }
-      
-      
+
+
     })
 
     this.setState({ salees: data });
   }
 
-  logout = (event)=>{
+  logout = (event) => {
     event.preventDefault()
-    auth.logout(()=>{
+    auth.logout(() => {
       localStorage.clear();
       this.props.history.push('/')
     })

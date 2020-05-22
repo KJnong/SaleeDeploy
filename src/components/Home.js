@@ -4,6 +4,7 @@ import Header from './Header'
 import Sales from './Sales'
 import axios from 'axios'
 import Search from './Search';
+import { apiUrl } from '../config'
 
 
 export default class Home extends Component {
@@ -15,7 +16,7 @@ export default class Home extends Component {
 
     loadContent = async () => {
 
-        const {data} = await axios.get('http://localhost:5000/salee')
+        const {data} = await axios.get(apiUrl + '/salee')
     
         this.setState({ salees: data });
       }

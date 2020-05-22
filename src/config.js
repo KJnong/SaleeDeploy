@@ -1,0 +1,1 @@
+export const apiUrl = "https://saleeserver2.herokuapp.com"
