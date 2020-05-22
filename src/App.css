@@ -2,30 +2,38 @@
   text-align: center;
 }
 
-.loading{
+.loading {
   text-align: center;
 }
 
-body{
+body {
   background: url("./img/white-painted-wall-1939485.jpg");
   font-size: calc(10px + 2vmin);
 }
 
-.title, .logo{
+.title,
+.logo {
   text-align: center;
 }
 
-.button-primary{
+.button-primary {
   margin-left: 255px;
 }
 
-.u-full-width, #name{
+.u-full-width,
+#name {
   border-radius: 20px;
   width: 49%;
 }
 
-
-.sales{
+.sales {
   text-align: center;
   margin: auto;
+}
+
+.card-image {
+  height: 290px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
