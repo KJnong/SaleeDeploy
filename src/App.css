@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.loading{
+  text-align: center;
+}
+
+body{
+  background: url("./img/white-painted-wall-1939485.jpg");
+  font-size: calc(10px + 2vmin);
+}
+
+.title, .logo{
+  text-align: center;
+}
+
+.button-primary{
+  margin-left: 255px;
+}
+
+.u-full-width, #name{
+  border-radius: 20px;
+  width: 49%;
+}
+
+
+.sales{
+  text-align: center;
+  margin: auto;
+}
