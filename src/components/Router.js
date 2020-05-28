@@ -2,6 +2,7 @@ import auth from './PrivateRoute/auth'
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../components/ComponentStyle/Router.css';
+import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SaleeRoute from './PrivateRoute/SaleeRoute'
 import LoginRoute from './PrivateRoute/LoginRoute'
@@ -19,21 +20,21 @@ class Router1 extends React.Component {
     
     return (<Router>
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-          <div className="container">
-            <Link className="nav-link" to={"/"}>Home</Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className='nav-link' to={"/sign-in"}>Retailer</Link>
-                </li>
-                <li className="nav-item">
-                  <Link className={clasName} to={"/sign-up"}>Sign up</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+      
+
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand><Link className="nav-link" to={"/"}>Home</Link></Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+            </Nav>
+            <NavDropdown title="RETAILER" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#home"><Link className='nav-link' to={"/sign-in"}>Retailer</Link></NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#link"><Link className={clasName} to={"/sign-up"}>Sign up</Link></NavDropdown.Item>
+            </NavDropdown>
+          </Navbar.Collapse>
+        </Navbar>
 
         <div className="auth-wrapper">
           <div>

@@ -70,3 +70,8 @@ body, html, .App, #root, .auth-wrapper {
 .Logged-in{
   display: none;
 }
+
+.nav-link {
+  display: block;
+  padding: .5rem 5rem;
+}
