@@ -8,7 +8,7 @@ const Sales = (props) => {
     return (
         <div className="container-fluid">
             <div className="row row-cols-1 row-cols-md-3">
-                {props.salees.map(sale => (
+                {props.salees.map(sale => ( 
                     <div className="col mb-4">
                         <div className="card">
                             <div style={{ backgroundImage: `url('${apiUrl}/${sale.imagePath.replace('uploads', 'uploads/')}')` }} className="card-image" alt="Card image cap" />

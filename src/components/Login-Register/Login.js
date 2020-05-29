@@ -36,9 +36,7 @@ export default class Login extends Component {
         return (
             <div className="container-fluid">
                 <div className="row justify-content-center">
-                    <div className="col-12 col-sm-6 col-md-1"></div>
                     <div className="auth-inner">
-
                         <form onSubmit={this.LoginUser} >
                             <h3>Sign In</h3>
 

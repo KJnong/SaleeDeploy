@@ -46,24 +46,37 @@ class Form extends React.Component {
 
     render() {
         return (
-            <form className="salee-form" onSubmit={this.sendSalee}>
-                <div class="custom-file">
-                    <input type="file" onChange={this.fileSelected} class="custom-file-input" id="customFile" />
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+            <div className="container-fluid">
+                <div className="row justify-content-center">
+                    <div className="auth-inner">
+                        <form onSubmit={this.sendSalee} >
+                            <h3>New Salee</h3>
+
+                            <div class="custom-file">
+                                <input type="file" onChange={this.fileSelected} class="custom-file-input" id="customFile" />
+                                <label class="custom-file-label" for="customFile">Image</label>
+                            </div>
+
+                            <div className="form-group">
+                                <label> </label>
+                                <input className="form-control" type="text" name="items" placeholder='Item Name' />
+                            </div>
+
+                            <div className="form-group">
+                                <label> </label>
+                                <input className="form-control" type="text" name="was" placeholder='Previous Price' />
+                            </div>
+
+                            <div className="form-group">
+                                <label> </label>
+                                <input className="form-control" type="number" name="now" placeholder='Current Price' />
+                            </div>
+
+                            <button type="submit" className="btn btn-primary btn-block">Send Salee</button>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <input type="text" name="items" placeholder='Item' />
-                </div>
-                <div>
-                    <input type="text" name="was" placeholder='Was' />
-                </div>
-                <div>
-                    <input type="number" name="now" placeholder='Now' />
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary btn-lg">Send Salee</button>
-                </div>
-            </form>
+            </div>
         )
     }
 }
