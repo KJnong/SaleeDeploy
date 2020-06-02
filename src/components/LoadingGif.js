@@ -1,7 +1,7 @@
 import React from 'react'
-import loadingImage from '../img/giphy.gif'
+import loadingImage from '../img/25.gif'
 
-function loadingImage() {
+function loading() {
     return(
         <div className="loading">
             <img width="200px" src={loadingImage} alt="image"/>
@@ -9,4 +9,4 @@ function loadingImage() {
     )
 }
 
-export default loadingImage;
+export default loading;
